@@ -1,0 +1,13 @@
+input.ng-invalid,
+textarea.ng-invalid{
+  border: 1px red solid;
+  box-shadow: 0 0 2px 0 red;
+}
+
+input.ng-valid,
+textarea.ng-valid{
+  border: 1px lime solid;
+  box-shadow: 0 0 2px 0 lime;
+}
+
+
