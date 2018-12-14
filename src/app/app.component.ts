@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import * as firebase from 'firebase';
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-root",
@@ -8,6 +9,8 @@ import * as firebase from 'firebase';
 })
 export class AppComponent implements OnInit {
   loadedFeature = 'recipe';
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
     firebase.initializeApp({
@@ -18,4 +21,12 @@ export class AppComponent implements OnInit {
   onNavigate(feature: string) {
     this.loadedFeature = feature;
   }
+  returnClass() {
+    if (this.router.url === '/') {
+      return 'home-bg';
+    } else {
+      return '';
+    }
+  }
+
 }
